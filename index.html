@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ox 퀴즈</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+   <link rel="stylesheet" href="./oxquiz.css">
+
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+   <!-- <script src="js/oxquiz.js" defer type="module"></script> -->
+   <script src="./oxquiz.js" defer type="module"></script>
+   <!-- <script src="js/quizData.js"></script> -->
+</head>
+<body>
+   <div id="wrap">
+      <div id="intro">
+         <h1>OX Quiz</h1>
+         <ul>
+            <li>총 10문제</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+         </ul>
+         <button class="quiz_start">시작하기</button>
+      </div>
+      <div id="quiz_wrap">
+         <h2 id="quiz_no"></h2>
+         <p id="question"></p>
+            <div id="answer_btns">
+               <button class="o">O</button>
+               <button class="x">X</button>
+            </div>
+      </div>
+      <div id="result_wrap">
+         <h2>결과 보기</h2>
+         <p class="score"></p>
+         <div id="result_btns">
+            <button class="wrong_answer">오답보기</button>
+         </div>
+      </div>
+
+      <div id="wrong_wrap">
+         <h2>오답확인</h2>
+         <ul id="wrong_answer_list"></ul>
+         <div id="wrong_btns">
+            <button class="restart">다시하기</button>
+         </div>
+      </div>
+      <div class="timer"></div>
+      <div class="alltimer">총 시간</div>
+
+      <div id= "finish">
+         <h2>시간이 종료되었습니다.</h2>
+      </div>
+   </div>
+</body>
+</html>
+
+<!--
+*정답을 선택하면 자동으로 다음 문제 => 정답 결과 노출 여부
+*시간 제한 : 문항별, 전체 시간
+- 시간 안에 선택을 못하면 => 오답
+
+
+* 점수 환산:
+- 못 푼 문제 만큼 별점 || 5초 안에 다 푼 경우 가점
+* 점수 공개, 오답 공개
+*오답 풀이 제공 여부
+
+*******************
+  * 만점일 때 오답노트 처리
+
+    * 문제마다 오답 확인, 카운터 유지
+   => 정답입니다.~~~~~> 자동으로 다음문제
+   => 오답입니다.~~~~~> 오답노트 => 다음문제 버튼
+
+   * 전체 시간 카운트 => 가점 처리(로직)
+
+=> 선택형 문제(리퍼런스 w3schools quiz) => 포트폴리오
+
+-->
